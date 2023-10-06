@@ -47,14 +47,13 @@
         <script src="data/Associationsnonpartenaireshabiliteslaidealimentaire_13.js"></script>
         <script src="data/AssociationspartenairesMAJ_14.js"></script>
         <script src="data/Populationcommunale_15.js"></script>
-        <script src="data/EPCILandes_16.js"></script>
-        <script src="data/Populationintercommunalits_17.js"></script>
-        <script src="data/Communesavecaidealimentaire_18.js"></script>
-        <script src="data/AntennesBANouvelleAquitaine_19.js"></script>
-        <script src="data/BANouvelleAquitaine_20.js"></script>
-        <script src="data/BAdesLandes_21.js"></script>
-        <script src="data/DpartementsNA_22.js"></script>
-        <script src="data/RgionNouvelleAquitaine_23.js"></script>
+        <script src="data/Populationintercommunalits_16.js"></script>
+        <script src="data/Communesavecaidealimentaire_17.js"></script>
+        <script src="data/AntennesBANouvelleAquitaine_18.js"></script>
+        <script src="data/BANouvelleAquitaine_19.js"></script>
+        <script src="data/BAdesLandes_20.js"></script>
+        <script src="data/DpartementsNA_21.js"></script>
+        <script src="data/RgionNouvelleAquitaine_22.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
@@ -1189,50 +1188,7 @@
             style: style_Populationcommunale_15_0,
         });
         bounds_group.addLayer(layer_Populationcommunale_15);
-        function pop_EPCILandes_16(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2"><strong>EPCI</strong><br />' + (feature.properties['NOM_EPCI'] !== null ? autolinker.link(feature.properties['NOM_EPCI'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>Type</strong><br />' + (feature.properties['TYPE_EPCI'] !== null ? autolinker.link(feature.properties['TYPE_EPCI'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>Population au dernier recensement 2019</strong><br />' + (feature.properties['Population au dernier recensement 2019'] !== null ? autolinker.link(feature.properties['Population au dernier recensement 2019'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_EPCILandes_16_0() {
-            return {
-                pane: 'pane_EPCILandes_16',
-                opacity: 1,
-                color: 'rgba(139,135,135,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(145,82,45,0.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_EPCILandes_16');
-        map.getPane('pane_EPCILandes_16').style.zIndex = 416;
-        map.getPane('pane_EPCILandes_16').style['mix-blend-mode'] = 'normal';
-        var layer_EPCILandes_16 = new L.geoJson(json_EPCILandes_16, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_EPCILandes_16',
-            layerName: 'layer_EPCILandes_16',
-            pane: 'pane_EPCILandes_16',
-            onEachFeature: pop_EPCILandes_16,
-            style: style_EPCILandes_16_0,
-        });
-        bounds_group.addLayer(layer_EPCILandes_16);
-        function pop_Populationintercommunalits_17(feature, layer) {
+        function pop_Populationintercommunalits_16(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>EPCI</strong><br />' + (feature.properties['NOM_EPCI'] !== null ? autolinker.link(feature.properties['NOM_EPCI'].toLocaleString()) : '') + '</td>\
@@ -1247,10 +1203,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Populationintercommunalits_17_0(feature) {
+        function style_Populationintercommunalits_16_0(feature) {
             if (feature.properties['Population'] >= 6264.000000 && feature.properties['Population'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_Populationintercommunalits_17',
+                pane: 'pane_Populationintercommunalits_16',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1265,7 +1221,7 @@
             }
             if (feature.properties['Population'] >= 10000.000000 && feature.properties['Population'] <= 20000.000000 ) {
                 return {
-                pane: 'pane_Populationintercommunalits_17',
+                pane: 'pane_Populationintercommunalits_16',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1280,7 +1236,7 @@
             }
             if (feature.properties['Population'] >= 20000.000000 && feature.properties['Population'] <= 30000.000000 ) {
                 return {
-                pane: 'pane_Populationintercommunalits_17',
+                pane: 'pane_Populationintercommunalits_16',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1295,7 +1251,7 @@
             }
             if (feature.properties['Population'] >= 30000.000000 && feature.properties['Population'] <= 40000.000000 ) {
                 return {
-                pane: 'pane_Populationintercommunalits_17',
+                pane: 'pane_Populationintercommunalits_16',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1310,7 +1266,7 @@
             }
             if (feature.properties['Population'] >= 50000.000000 && feature.properties['Population'] <= 60000.000000 ) {
                 return {
-                pane: 'pane_Populationintercommunalits_17',
+                pane: 'pane_Populationintercommunalits_16',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1325,7 +1281,7 @@
             }
             if (feature.properties['Population'] >= 60000.000000 && feature.properties['Population'] <= 68368.000000 ) {
                 return {
-                pane: 'pane_Populationintercommunalits_17',
+                pane: 'pane_Populationintercommunalits_16',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1339,20 +1295,20 @@
             }
             }
         }
-        map.createPane('pane_Populationintercommunalits_17');
-        map.getPane('pane_Populationintercommunalits_17').style.zIndex = 417;
-        map.getPane('pane_Populationintercommunalits_17').style['mix-blend-mode'] = 'normal';
-        var layer_Populationintercommunalits_17 = new L.geoJson(json_Populationintercommunalits_17, {
+        map.createPane('pane_Populationintercommunalits_16');
+        map.getPane('pane_Populationintercommunalits_16').style.zIndex = 416;
+        map.getPane('pane_Populationintercommunalits_16').style['mix-blend-mode'] = 'normal';
+        var layer_Populationintercommunalits_16 = new L.geoJson(json_Populationintercommunalits_16, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Populationintercommunalits_17',
-            layerName: 'layer_Populationintercommunalits_17',
-            pane: 'pane_Populationintercommunalits_17',
-            onEachFeature: pop_Populationintercommunalits_17,
-            style: style_Populationintercommunalits_17_0,
+            dataVar: 'json_Populationintercommunalits_16',
+            layerName: 'layer_Populationintercommunalits_16',
+            pane: 'pane_Populationintercommunalits_16',
+            onEachFeature: pop_Populationintercommunalits_16,
+            style: style_Populationintercommunalits_16_0,
         });
-        bounds_group.addLayer(layer_Populationintercommunalits_17);
-        function pop_Communesavecaidealimentaire_18(feature, layer) {
+        bounds_group.addLayer(layer_Populationintercommunalits_16);
+        function pop_Communesavecaidealimentaire_17(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Commune</strong><br />' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
@@ -1364,9 +1320,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Communesavecaidealimentaire_18_0() {
+        function style_Communesavecaidealimentaire_17_0() {
             return {
-                pane: 'pane_Communesavecaidealimentaire_18',
+                pane: 'pane_Communesavecaidealimentaire_17',
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
                 dashArray: '',
@@ -1377,21 +1333,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_Communesavecaidealimentaire_18');
-        map.getPane('pane_Communesavecaidealimentaire_18').style.zIndex = 418;
-        map.getPane('pane_Communesavecaidealimentaire_18').style['mix-blend-mode'] = 'normal';
-        var layer_Communesavecaidealimentaire_18 = new L.geoJson(json_Communesavecaidealimentaire_18, {
+        map.createPane('pane_Communesavecaidealimentaire_17');
+        map.getPane('pane_Communesavecaidealimentaire_17').style.zIndex = 417;
+        map.getPane('pane_Communesavecaidealimentaire_17').style['mix-blend-mode'] = 'normal';
+        var layer_Communesavecaidealimentaire_17 = new L.geoJson(json_Communesavecaidealimentaire_17, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_Communesavecaidealimentaire_18',
-            layerName: 'layer_Communesavecaidealimentaire_18',
-            pane: 'pane_Communesavecaidealimentaire_18',
-            onEachFeature: pop_Communesavecaidealimentaire_18,
-            style: style_Communesavecaidealimentaire_18_0,
+            dataVar: 'json_Communesavecaidealimentaire_17',
+            layerName: 'layer_Communesavecaidealimentaire_17',
+            pane: 'pane_Communesavecaidealimentaire_17',
+            onEachFeature: pop_Communesavecaidealimentaire_17,
+            style: style_Communesavecaidealimentaire_17_0,
         });
-        bounds_group.addLayer(layer_Communesavecaidealimentaire_18);
-        map.addLayer(layer_Communesavecaidealimentaire_18);
-        function pop_AntennesBANouvelleAquitaine_19(feature, layer) {
+        bounds_group.addLayer(layer_Communesavecaidealimentaire_17);
+        map.addLayer(layer_Communesavecaidealimentaire_17);
+        function pop_AntennesBANouvelleAquitaine_18(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Adresse</strong><br />' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
@@ -1409,9 +1365,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_AntennesBANouvelleAquitaine_19_0() {
+        function style_AntennesBANouvelleAquitaine_18_0() {
             return {
-                pane: 'pane_AntennesBANouvelleAquitaine_19',
+                pane: 'pane_AntennesBANouvelleAquitaine_18',
                 shape: 'square',
                 radius: 6.0,
                 opacity: 1,
@@ -1426,27 +1382,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_AntennesBANouvelleAquitaine_19');
-        map.getPane('pane_AntennesBANouvelleAquitaine_19').style.zIndex = 419;
-        map.getPane('pane_AntennesBANouvelleAquitaine_19').style['mix-blend-mode'] = 'normal';
-        var layer_AntennesBANouvelleAquitaine_19 = new L.geoJson(json_AntennesBANouvelleAquitaine_19, {
+        map.createPane('pane_AntennesBANouvelleAquitaine_18');
+        map.getPane('pane_AntennesBANouvelleAquitaine_18').style.zIndex = 418;
+        map.getPane('pane_AntennesBANouvelleAquitaine_18').style['mix-blend-mode'] = 'normal';
+        var layer_AntennesBANouvelleAquitaine_18 = new L.geoJson(json_AntennesBANouvelleAquitaine_18, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_AntennesBANouvelleAquitaine_19',
-            layerName: 'layer_AntennesBANouvelleAquitaine_19',
-            pane: 'pane_AntennesBANouvelleAquitaine_19',
-            onEachFeature: pop_AntennesBANouvelleAquitaine_19,
+            dataVar: 'json_AntennesBANouvelleAquitaine_18',
+            layerName: 'layer_AntennesBANouvelleAquitaine_18',
+            pane: 'pane_AntennesBANouvelleAquitaine_18',
+            onEachFeature: pop_AntennesBANouvelleAquitaine_18,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.shapeMarker(latlng, style_AntennesBANouvelleAquitaine_19_0(feature));
+                return L.shapeMarker(latlng, style_AntennesBANouvelleAquitaine_18_0(feature));
             },
         });
-        bounds_group.addLayer(layer_AntennesBANouvelleAquitaine_19);
-        map.addLayer(layer_AntennesBANouvelleAquitaine_19);
-        function pop_BANouvelleAquitaine_20(feature, layer) {
+        bounds_group.addLayer(layer_AntennesBANouvelleAquitaine_18);
+        map.addLayer(layer_AntennesBANouvelleAquitaine_18);
+        function pop_BANouvelleAquitaine_19(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Banque Alimentaire</strong><br />' + (feature.properties['BANQUES AL'] !== null ? autolinker.link(feature.properties['BANQUES AL'].toLocaleString()) : '') + '</td>\
@@ -1461,9 +1417,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_BANouvelleAquitaine_20_0() {
+        function style_BANouvelleAquitaine_19_0() {
             return {
-                pane: 'pane_BANouvelleAquitaine_20',
+                pane: 'pane_BANouvelleAquitaine_19',
                 shape: 'square',
                 radius: 12.4,
                 opacity: 1,
@@ -1478,9 +1434,9 @@
                 interactive: true,
             }
         }
-        function style_BANouvelleAquitaine_20_1() {
+        function style_BANouvelleAquitaine_19_1() {
             return {
-                pane: 'pane_BANouvelleAquitaine_20',
+                pane: 'pane_BANouvelleAquitaine_19',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -1490,33 +1446,33 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_BANouvelleAquitaine_20');
-        map.getPane('pane_BANouvelleAquitaine_20').style.zIndex = 420;
-        map.getPane('pane_BANouvelleAquitaine_20').style['mix-blend-mode'] = 'normal';
-        var layer_BANouvelleAquitaine_20 = new L.geoJson.multiStyle(json_BANouvelleAquitaine_20, {
+        map.createPane('pane_BANouvelleAquitaine_19');
+        map.getPane('pane_BANouvelleAquitaine_19').style.zIndex = 419;
+        map.getPane('pane_BANouvelleAquitaine_19').style['mix-blend-mode'] = 'normal';
+        var layer_BANouvelleAquitaine_19 = new L.geoJson.multiStyle(json_BANouvelleAquitaine_19, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BANouvelleAquitaine_20',
-            layerName: 'layer_BANouvelleAquitaine_20',
-            pane: 'pane_BANouvelleAquitaine_20',
-            onEachFeature: pop_BANouvelleAquitaine_20,
+            dataVar: 'json_BANouvelleAquitaine_19',
+            layerName: 'layer_BANouvelleAquitaine_19',
+            pane: 'pane_BANouvelleAquitaine_19',
+            onEachFeature: pop_BANouvelleAquitaine_19,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_BANouvelleAquitaine_20_0(feature));
+                return L.marker(latlng, style_BANouvelleAquitaine_19_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_BANouvelleAquitaine_20_1(feature));
+                return L.marker(latlng, style_BANouvelleAquitaine_19_1(feature));
             },
         ]});
-        bounds_group.addLayer(layer_BANouvelleAquitaine_20);
-        map.addLayer(layer_BANouvelleAquitaine_20);
-        function pop_BAdesLandes_21(feature, layer) {
+        bounds_group.addLayer(layer_BANouvelleAquitaine_19);
+        map.addLayer(layer_BANouvelleAquitaine_19);
+        function pop_BAdesLandes_20(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Banque Alimentaire</strong><br />' + (feature.properties['BANQUES AL'] !== null ? autolinker.link(feature.properties['BANQUES AL'].toLocaleString()) : '') + '</td>\
@@ -1531,9 +1487,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_BAdesLandes_21_0() {
+        function style_BAdesLandes_20_0() {
             return {
-                pane: 'pane_BAdesLandes_21',
+                pane: 'pane_BAdesLandes_20',
                 shape: 'square',
                 radius: 12.4,
                 opacity: 1,
@@ -1548,9 +1504,9 @@
                 interactive: true,
             }
         }
-        function style_BAdesLandes_21_1() {
+        function style_BAdesLandes_20_1() {
             return {
-                pane: 'pane_BAdesLandes_21',
+                pane: 'pane_BAdesLandes_20',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -1560,33 +1516,33 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_BAdesLandes_21');
-        map.getPane('pane_BAdesLandes_21').style.zIndex = 421;
-        map.getPane('pane_BAdesLandes_21').style['mix-blend-mode'] = 'normal';
-        var layer_BAdesLandes_21 = new L.geoJson.multiStyle(json_BAdesLandes_21, {
+        map.createPane('pane_BAdesLandes_20');
+        map.getPane('pane_BAdesLandes_20').style.zIndex = 420;
+        map.getPane('pane_BAdesLandes_20').style['mix-blend-mode'] = 'normal';
+        var layer_BAdesLandes_20 = new L.geoJson.multiStyle(json_BAdesLandes_20, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BAdesLandes_21',
-            layerName: 'layer_BAdesLandes_21',
-            pane: 'pane_BAdesLandes_21',
-            onEachFeature: pop_BAdesLandes_21,
+            dataVar: 'json_BAdesLandes_20',
+            layerName: 'layer_BAdesLandes_20',
+            pane: 'pane_BAdesLandes_20',
+            onEachFeature: pop_BAdesLandes_20,
             pointToLayers: [function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_BAdesLandes_21_0(feature));
+                return L.marker(latlng, style_BAdesLandes_20_0(feature));
             },function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_BAdesLandes_21_1(feature));
+                return L.marker(latlng, style_BAdesLandes_20_1(feature));
             },
         ]});
-        bounds_group.addLayer(layer_BAdesLandes_21);
-        map.addLayer(layer_BAdesLandes_21);
-        function pop_DpartementsNA_22(feature, layer) {
+        bounds_group.addLayer(layer_BAdesLandes_20);
+        map.addLayer(layer_BAdesLandes_20);
+        function pop_DpartementsNA_21(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['reg'] !== null ? autolinker.link(feature.properties['reg'].toLocaleString()) : '') + '</td>\
@@ -1598,9 +1554,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_DpartementsNA_22_0() {
+        function style_DpartementsNA_21_0() {
             return {
-                pane: 'pane_DpartementsNA_22',
+                pane: 'pane_DpartementsNA_21',
                 opacity: 1,
                 color: 'rgba(53,121,177,1.0)',
                 dashArray: '',
@@ -1611,21 +1567,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_DpartementsNA_22');
-        map.getPane('pane_DpartementsNA_22').style.zIndex = 422;
-        map.getPane('pane_DpartementsNA_22').style['mix-blend-mode'] = 'normal';
-        var layer_DpartementsNA_22 = new L.geoJson(json_DpartementsNA_22, {
+        map.createPane('pane_DpartementsNA_21');
+        map.getPane('pane_DpartementsNA_21').style.zIndex = 421;
+        map.getPane('pane_DpartementsNA_21').style['mix-blend-mode'] = 'normal';
+        var layer_DpartementsNA_21 = new L.geoJson(json_DpartementsNA_21, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_DpartementsNA_22',
-            layerName: 'layer_DpartementsNA_22',
-            pane: 'pane_DpartementsNA_22',
-            onEachFeature: pop_DpartementsNA_22,
-            style: style_DpartementsNA_22_0,
+            dataVar: 'json_DpartementsNA_21',
+            layerName: 'layer_DpartementsNA_21',
+            pane: 'pane_DpartementsNA_21',
+            onEachFeature: pop_DpartementsNA_21,
+            style: style_DpartementsNA_21_0,
         });
-        bounds_group.addLayer(layer_DpartementsNA_22);
-        map.addLayer(layer_DpartementsNA_22);
-        function pop_RgionNouvelleAquitaine_23(feature, layer) {
+        bounds_group.addLayer(layer_DpartementsNA_21);
+        map.addLayer(layer_DpartementsNA_21);
+        function pop_RgionNouvelleAquitaine_22(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['reg'] !== null ? autolinker.link(feature.properties['reg'].toLocaleString()) : '') + '</td>\
@@ -1637,9 +1593,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_RgionNouvelleAquitaine_23_0() {
+        function style_RgionNouvelleAquitaine_22_0() {
             return {
-                pane: 'pane_RgionNouvelleAquitaine_23',
+                pane: 'pane_RgionNouvelleAquitaine_22',
                 opacity: 1,
                 color: 'rgba(228,26,28,1.0)',
                 dashArray: '',
@@ -1650,22 +1606,22 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_RgionNouvelleAquitaine_23');
-        map.getPane('pane_RgionNouvelleAquitaine_23').style.zIndex = 423;
-        map.getPane('pane_RgionNouvelleAquitaine_23').style['mix-blend-mode'] = 'normal';
-        var layer_RgionNouvelleAquitaine_23 = new L.geoJson(json_RgionNouvelleAquitaine_23, {
+        map.createPane('pane_RgionNouvelleAquitaine_22');
+        map.getPane('pane_RgionNouvelleAquitaine_22').style.zIndex = 422;
+        map.getPane('pane_RgionNouvelleAquitaine_22').style['mix-blend-mode'] = 'normal';
+        var layer_RgionNouvelleAquitaine_22 = new L.geoJson(json_RgionNouvelleAquitaine_22, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_RgionNouvelleAquitaine_23',
-            layerName: 'layer_RgionNouvelleAquitaine_23',
-            pane: 'pane_RgionNouvelleAquitaine_23',
-            onEachFeature: pop_RgionNouvelleAquitaine_23,
-            style: style_RgionNouvelleAquitaine_23_0,
+            dataVar: 'json_RgionNouvelleAquitaine_22',
+            layerName: 'layer_RgionNouvelleAquitaine_22',
+            pane: 'pane_RgionNouvelleAquitaine_22',
+            onEachFeature: pop_RgionNouvelleAquitaine_22,
+            style: style_RgionNouvelleAquitaine_22_0,
         });
-        bounds_group.addLayer(layer_RgionNouvelleAquitaine_23);
-        map.addLayer(layer_RgionNouvelleAquitaine_23);
+        bounds_group.addLayer(layer_RgionNouvelleAquitaine_22);
+        map.addLayer(layer_RgionNouvelleAquitaine_22);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/RgionNouvelleAquitaine_23.png" /> Région Nouvelle Aquitaine': layer_RgionNouvelleAquitaine_23,'<img src="legend/DpartementsNA_22.png" /> Départements NA': layer_DpartementsNA_22,'<img src="legend/BAdesLandes_21.png" /> BA des Landes': layer_BAdesLandes_21,'<img src="legend/BANouvelleAquitaine_20.png" /> BA Nouvelle Aquitaine': layer_BANouvelleAquitaine_20,'<img src="legend/AntennesBANouvelleAquitaine_19.png" /> Antennes BA Nouvelle Aquitaine': layer_AntennesBANouvelleAquitaine_19,'<img src="legend/Communesavecaidealimentaire_18.png" /> Communes avec aide alimentaire ': layer_Communesavecaidealimentaire_18,'Population intercommunalités<br /><table><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_17_6000100000.png" /></td><td>6000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_17_10000200001.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_17_20000300002.png" /></td><td>20000 - 30000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_17_30000400003.png" /></td><td>30000 - 40000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_17_50000600004.png" /></td><td>50000 - 60000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_17_600005.png" /></td><td>>60000</td></tr></table>': layer_Populationintercommunalits_17,'<img src="legend/EPCILandes_16.png" /> EPCI - Landes': layer_EPCILandes_16,'Population communale<br /><table><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_4010000.png" /></td><td>40 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_100050001.png" /></td><td>1000 - 5000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_5000100002.png" /></td><td>5000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_10000200003.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_20000300004.png" /></td><td>20000 - 30 000</td></tr></table>': layer_Populationcommunale_15,'<img src="legend/AssociationspartenairesMAJ_14.png" /> Associations partenaires MAJ': layer_AssociationspartenairesMAJ_14,'<img src="legend/Associationsnonpartenaireshabiliteslaidealimentaire_13.png" /> Associations non partenaires habilitées à l\'aide alimentaire': layer_Associationsnonpartenaireshabiliteslaidealimentaire_13,'<img src="legend/CroixRouge_12.png" /> Croix-Rouge': layer_CroixRouge_12,'<img src="legend/SecoursPopulaireFranaisnonpartenaire_11.png" /> Secours Populaire Français (non partenaire)': layer_SecoursPopulaireFranaisnonpartenaire_11,'<img src="legend/RestoduCoeur_10.png" /> Resto du Coeur': layer_RestoduCoeur_10,'<img src="legend/DonateursBA_9.png" /> Donateurs BA': layer_DonateursBA_9,'<img src="legend/DonnesindisponiblesNiveaudevie_8.png" /> Données indisponibles - Niveau de vie': layer_DonnesindisponiblesNiveaudevie_8,'Indice présomption précarité alimentaire <br /><table><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_0941390.png" /></td><td>0,94 - 1,39</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_1421671.png" /></td><td>1,42 - 1,67</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_168192.png" /></td><td>1,68 - 1,9</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_1912183.png" /></td><td>1,91 - 2,18</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_2192854.png" /></td><td>2,19 - 2,85</td></tr></table>': layer_Indiceprsomptionprcaritalimentaire_7,'Médiane du niveau de vie par UC - Landes<br /><table><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_0208100.png" /></td><td>0 - 20810</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_20810222101.png" /></td><td>20810 - 22210</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_22210236302.png" /></td><td>22210 - 23630</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_23630283603.png" /></td><td>23630 - 28360</td></tr></table>': layer_MdianeduniveaudevieparUCLandes_6,'Monoparentalité<br /><table><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_0120.png" /></td><td>0 - 12</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_12251.png" /></td><td>12 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_25402.png" /></td><td>25 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_401003.png" /></td><td>40 - 100</td></tr></table>': layer_Monoparentalit_5,'Part des 75 ans et plus<br /><table><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_2920.png" /></td><td>2 - 9,2</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_921291.png" /></td><td>9,2 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_1291762.png" /></td><td>12,9 - 17,6</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_176253.png" /></td><td>17,6 - 25</td></tr></table>': layer_Partdes75ansetplus_4,'Part des moins de 15 ans<br /><table><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_641290.png" /></td><td>6,4 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1291651.png" /></td><td>12,9 - 16,5</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1651992.png" /></td><td>16,5 - 19,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1992953.png" /></td><td>19,9 - 29,5</td></tr></table>': layer_Partdesmoinsde15ans_3,'Taux de motorisation des ménages<br /><table><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_7598930.png" /></td><td>75,9 - 89,3</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_8939361.png" /></td><td>89,3 - 93,6</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_9369742.png" /></td><td>93,6 - 97,4</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_97410893.png" /></td><td>97,4 - 108,9</td></tr></table>': layer_Tauxdemotorisationdesmnages_2,'<img src="legend/CommunesLandes_1.png" /> Communes - Landes': layer_CommunesLandes_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/RgionNouvelleAquitaine_22.png" /> Région Nouvelle Aquitaine': layer_RgionNouvelleAquitaine_22,'<img src="legend/DpartementsNA_21.png" /> Départements NA': layer_DpartementsNA_21,'<img src="legend/BAdesLandes_20.png" /> BA des Landes': layer_BAdesLandes_20,'<img src="legend/BANouvelleAquitaine_19.png" /> BA Nouvelle Aquitaine': layer_BANouvelleAquitaine_19,'<img src="legend/AntennesBANouvelleAquitaine_18.png" /> Antennes BA Nouvelle Aquitaine': layer_AntennesBANouvelleAquitaine_18,'<img src="legend/Communesavecaidealimentaire_17.png" /> Communes avec aide alimentaire ': layer_Communesavecaidealimentaire_17,'Population intercommunalités<br /><table><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_6000100000.png" /></td><td>6000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_10000200001.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_20000300002.png" /></td><td>20000 - 30000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_30000400003.png" /></td><td>30000 - 40000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_50000600004.png" /></td><td>50000 - 60000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_600005.png" /></td><td>>60000</td></tr></table>': layer_Populationintercommunalits_16,'Population communale<br /><table><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_4010000.png" /></td><td>40 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_100050001.png" /></td><td>1000 - 5000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_5000100002.png" /></td><td>5000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_10000200003.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_20000300004.png" /></td><td>20000 - 30 000</td></tr></table>': layer_Populationcommunale_15,'<img src="legend/AssociationspartenairesMAJ_14.png" /> Associations partenaires MAJ': layer_AssociationspartenairesMAJ_14,'<img src="legend/Associationsnonpartenaireshabiliteslaidealimentaire_13.png" /> Associations non partenaires habilitées à l\'aide alimentaire': layer_Associationsnonpartenaireshabiliteslaidealimentaire_13,'<img src="legend/CroixRouge_12.png" /> Croix-Rouge': layer_CroixRouge_12,'<img src="legend/SecoursPopulaireFranaisnonpartenaire_11.png" /> Secours Populaire Français (non partenaire)': layer_SecoursPopulaireFranaisnonpartenaire_11,'<img src="legend/RestoduCoeur_10.png" /> Resto du Coeur': layer_RestoduCoeur_10,'<img src="legend/DonateursBA_9.png" /> Donateurs BA': layer_DonateursBA_9,'<img src="legend/DonnesindisponiblesNiveaudevie_8.png" /> Données indisponibles - Niveau de vie': layer_DonnesindisponiblesNiveaudevie_8,'Indice présomption précarité alimentaire <br /><table><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_0941390.png" /></td><td>0,94 - 1,39</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_1421671.png" /></td><td>1,42 - 1,67</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_168192.png" /></td><td>1,68 - 1,9</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_1912183.png" /></td><td>1,91 - 2,18</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_2192854.png" /></td><td>2,19 - 2,85</td></tr></table>': layer_Indiceprsomptionprcaritalimentaire_7,'Médiane du niveau de vie par UC - Landes<br /><table><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_0208100.png" /></td><td>0 - 20810</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_20810222101.png" /></td><td>20810 - 22210</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_22210236302.png" /></td><td>22210 - 23630</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_23630283603.png" /></td><td>23630 - 28360</td></tr></table>': layer_MdianeduniveaudevieparUCLandes_6,'Monoparentalité<br /><table><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_0120.png" /></td><td>0 - 12</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_12251.png" /></td><td>12 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_25402.png" /></td><td>25 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_401003.png" /></td><td>40 - 100</td></tr></table>': layer_Monoparentalit_5,'Part des 75 ans et plus<br /><table><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_2920.png" /></td><td>2 - 9,2</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_921291.png" /></td><td>9,2 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_1291762.png" /></td><td>12,9 - 17,6</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_176253.png" /></td><td>17,6 - 25</td></tr></table>': layer_Partdes75ansetplus_4,'Part des moins de 15 ans<br /><table><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_641290.png" /></td><td>6,4 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1291651.png" /></td><td>12,9 - 16,5</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1651992.png" /></td><td>16,5 - 19,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1992953.png" /></td><td>19,9 - 29,5</td></tr></table>': layer_Partdesmoinsde15ans_3,'Taux de motorisation des ménages<br /><table><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_7598930.png" /></td><td>75,9 - 89,3</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_8939361.png" /></td><td>89,3 - 93,6</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_9369742.png" /></td><td>93,6 - 97,4</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_97410893.png" /></td><td>97,4 - 108,9</td></tr></table>': layer_Tauxdemotorisationdesmnages_2,'<img src="legend/CommunesLandes_1.png" /> Communes - Landes': layer_CommunesLandes_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
