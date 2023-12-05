@@ -57,7 +57,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[43.37753255311849,-1.6700680833760868],[44.44617105347425,1.0438693248158208]]);
+        }).fitBounds([[43.46593822007751,-1.6771893429783078],[44.53300215541143,0.7847318337895443]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -623,7 +623,7 @@
         }
 
         function style_Indiceprsomptionprcaritalimentaire_7_0(feature) {
-            if (feature.properties['Indice de'] >= 0.940000 && feature.properties['Indice de'] <= 1.390000 ) {
+            if (feature.properties['Indice de'] >= 0.940000 && feature.properties['Indice de'] <= 1.570000 ) {
                 return {
                 pane: 'pane_Indiceprsomptionprcaritalimentaire_7',
                 opacity: 1,
@@ -634,11 +634,11 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(254,240,217,1.0)',
+                fillColor: 'rgba(51,160,44,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Indice de'] >= 1.390000 && feature.properties['Indice de'] <= 1.670000 ) {
+            if (feature.properties['Indice de'] >= 1.570000 && feature.properties['Indice de'] <= 1.740000 ) {
                 return {
                 pane: 'pane_Indiceprsomptionprcaritalimentaire_7',
                 opacity: 1,
@@ -649,11 +649,11 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(253,204,138,1.0)',
+                fillColor: 'rgba(171,221,164,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Indice de'] >= 1.670000 && feature.properties['Indice de'] <= 1.900000 ) {
+            if (feature.properties['Indice de'] >= 1.740000 && feature.properties['Indice de'] <= 1.880000 ) {
                 return {
                 pane: 'pane_Indiceprsomptionprcaritalimentaire_7',
                 opacity: 1,
@@ -664,11 +664,11 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(252,141,89,1.0)',
+                fillColor: 'rgba(253,191,111,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Indice de'] >= 1.900000 && feature.properties['Indice de'] <= 2.180000 ) {
+            if (feature.properties['Indice de'] >= 1.880000 && feature.properties['Indice de'] <= 2.040000 ) {
                 return {
                 pane: 'pane_Indiceprsomptionprcaritalimentaire_7',
                 opacity: 1,
@@ -679,11 +679,11 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(227,74,51,1.0)',
+                fillColor: 'rgba(255,127,0,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Indice de'] >= 2.180000 && feature.properties['Indice de'] <= 2.850000 ) {
+            if (feature.properties['Indice de'] >= 2.040000 && feature.properties['Indice de'] <= 2.850000 ) {
                 return {
                 pane: 'pane_Indiceprsomptionprcaritalimentaire_7',
                 opacity: 1,
@@ -694,7 +694,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(179,0,0,1.0)',
+                fillColor: 'rgba(215,25,28,1.0)',
                 interactive: true,
             }
             }
@@ -1330,7 +1330,7 @@
                 lineJoin: 'bevel',
                 weight: 4.0,
                 fillOpacity: 0,
-                interactive: false,
+                interactive: true,
             }
         }
         map.createPane('pane_Communesavecaidealimentaire_17');
@@ -1338,7 +1338,7 @@
         map.getPane('pane_Communesavecaidealimentaire_17').style['mix-blend-mode'] = 'normal';
         var layer_Communesavecaidealimentaire_17 = new L.geoJson(json_Communesavecaidealimentaire_17, {
             attribution: '',
-            interactive: false,
+            interactive: true,
             dataVar: 'json_Communesavecaidealimentaire_17',
             layerName: 'layer_Communesavecaidealimentaire_17',
             pane: 'pane_Communesavecaidealimentaire_17',
@@ -1621,7 +1621,7 @@
         bounds_group.addLayer(layer_RgionNouvelleAquitaine_22);
         map.addLayer(layer_RgionNouvelleAquitaine_22);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/RgionNouvelleAquitaine_22.png" /> Région Nouvelle Aquitaine': layer_RgionNouvelleAquitaine_22,'<img src="legend/DpartementsNA_21.png" /> Départements NA': layer_DpartementsNA_21,'<img src="legend/BAdesLandes_20.png" /> BA des Landes': layer_BAdesLandes_20,'<img src="legend/BANouvelleAquitaine_19.png" /> BA Nouvelle Aquitaine': layer_BANouvelleAquitaine_19,'<img src="legend/AntennesBANouvelleAquitaine_18.png" /> Antennes BA Nouvelle Aquitaine': layer_AntennesBANouvelleAquitaine_18,'<img src="legend/Communesavecaidealimentaire_17.png" /> Communes avec aide alimentaire ': layer_Communesavecaidealimentaire_17,'Population intercommunalités<br /><table><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_6000100000.png" /></td><td>6000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_10000200001.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_20000300002.png" /></td><td>20000 - 30000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_30000400003.png" /></td><td>30000 - 40000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_50000600004.png" /></td><td>50000 - 60000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_600005.png" /></td><td>>60000</td></tr></table>': layer_Populationintercommunalits_16,'Population communale<br /><table><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_4010000.png" /></td><td>40 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_100050001.png" /></td><td>1000 - 5000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_5000100002.png" /></td><td>5000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_10000200003.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_20000300004.png" /></td><td>20000 - 30 000</td></tr></table>': layer_Populationcommunale_15,'<img src="legend/AssociationspartenairesMAJ_14.png" /> Associations partenaires MAJ': layer_AssociationspartenairesMAJ_14,'<img src="legend/Associationsnonpartenaireshabiliteslaidealimentaire_13.png" /> Associations non partenaires habilitées à l\'aide alimentaire': layer_Associationsnonpartenaireshabiliteslaidealimentaire_13,'<img src="legend/CroixRouge_12.png" /> Croix-Rouge': layer_CroixRouge_12,'<img src="legend/SecoursPopulaireFranaisnonpartenaire_11.png" /> Secours Populaire Français (non partenaire)': layer_SecoursPopulaireFranaisnonpartenaire_11,'<img src="legend/RestoduCoeur_10.png" /> Resto du Coeur': layer_RestoduCoeur_10,'<img src="legend/DonateursBA_9.png" /> Donateurs BA': layer_DonateursBA_9,'<img src="legend/DonnesindisponiblesNiveaudevie_8.png" /> Données indisponibles - Niveau de vie': layer_DonnesindisponiblesNiveaudevie_8,'Indice présomption précarité alimentaire <br /><table><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_0941390.png" /></td><td>0,94 - 1,39</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_1421671.png" /></td><td>1,42 - 1,67</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_168192.png" /></td><td>1,68 - 1,9</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_1912183.png" /></td><td>1,91 - 2,18</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_2192854.png" /></td><td>2,19 - 2,85</td></tr></table>': layer_Indiceprsomptionprcaritalimentaire_7,'Médiane du niveau de vie par UC - Landes<br /><table><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_0208100.png" /></td><td>0 - 20810</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_20810222101.png" /></td><td>20810 - 22210</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_22210236302.png" /></td><td>22210 - 23630</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_23630283603.png" /></td><td>23630 - 28360</td></tr></table>': layer_MdianeduniveaudevieparUCLandes_6,'Monoparentalité<br /><table><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_0120.png" /></td><td>0 - 12</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_12251.png" /></td><td>12 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_25402.png" /></td><td>25 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_401003.png" /></td><td>40 - 100</td></tr></table>': layer_Monoparentalit_5,'Part des 75 ans et plus<br /><table><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_2920.png" /></td><td>2 - 9,2</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_921291.png" /></td><td>9,2 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_1291762.png" /></td><td>12,9 - 17,6</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_176253.png" /></td><td>17,6 - 25</td></tr></table>': layer_Partdes75ansetplus_4,'Part des moins de 15 ans<br /><table><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_641290.png" /></td><td>6,4 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1291651.png" /></td><td>12,9 - 16,5</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1651992.png" /></td><td>16,5 - 19,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1992953.png" /></td><td>19,9 - 29,5</td></tr></table>': layer_Partdesmoinsde15ans_3,'Taux de motorisation des ménages<br /><table><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_7598930.png" /></td><td>75,9 - 89,3</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_8939361.png" /></td><td>89,3 - 93,6</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_9369742.png" /></td><td>93,6 - 97,4</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_97410893.png" /></td><td>97,4 - 108,9</td></tr></table>': layer_Tauxdemotorisationdesmnages_2,'<img src="legend/CommunesLandes_1.png" /> Communes - Landes': layer_CommunesLandes_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/RgionNouvelleAquitaine_22.png" /> Région Nouvelle Aquitaine': layer_RgionNouvelleAquitaine_22,'<img src="legend/DpartementsNA_21.png" /> Départements NA': layer_DpartementsNA_21,'<img src="legend/BAdesLandes_20.png" /> BA des Landes': layer_BAdesLandes_20,'<img src="legend/BANouvelleAquitaine_19.png" /> BA Nouvelle Aquitaine': layer_BANouvelleAquitaine_19,'<img src="legend/AntennesBANouvelleAquitaine_18.png" /> Antennes BA Nouvelle Aquitaine': layer_AntennesBANouvelleAquitaine_18,'<img src="legend/Communesavecaidealimentaire_17.png" /> Communes avec aide alimentaire ': layer_Communesavecaidealimentaire_17,'Population intercommunalités<br /><table><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_6000100000.png" /></td><td>6000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_10000200001.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_20000300002.png" /></td><td>20000 - 30000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_30000400003.png" /></td><td>30000 - 40000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_50000600004.png" /></td><td>50000 - 60000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationintercommunalits_16_600005.png" /></td><td>>60000</td></tr></table>': layer_Populationintercommunalits_16,'Population communale<br /><table><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_4010000.png" /></td><td>40 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_100050001.png" /></td><td>1000 - 5000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_5000100002.png" /></td><td>5000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_10000200003.png" /></td><td>10000 - 20000</td></tr><tr><td style="text-align: center;"><img src="legend/Populationcommunale_15_20000300004.png" /></td><td>20000 - 30 000</td></tr></table>': layer_Populationcommunale_15,'<img src="legend/AssociationspartenairesMAJ_14.png" /> Associations partenaires MAJ': layer_AssociationspartenairesMAJ_14,'<img src="legend/Associationsnonpartenaireshabiliteslaidealimentaire_13.png" /> Associations non partenaires habilitées à l\'aide alimentaire': layer_Associationsnonpartenaireshabiliteslaidealimentaire_13,'<img src="legend/CroixRouge_12.png" /> Croix-Rouge': layer_CroixRouge_12,'<img src="legend/SecoursPopulaireFranaisnonpartenaire_11.png" /> Secours Populaire Français (non partenaire)': layer_SecoursPopulaireFranaisnonpartenaire_11,'<img src="legend/RestoduCoeur_10.png" /> Resto du Coeur': layer_RestoduCoeur_10,'<img src="legend/DonateursBA_9.png" /> Donateurs BA': layer_DonateursBA_9,'<img src="legend/DonnesindisponiblesNiveaudevie_8.png" /> Données indisponibles - Niveau de vie': layer_DonnesindisponiblesNiveaudevie_8,'Indice présomption précarité alimentaire <br /><table><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_Trèsbas0.png" /></td><td>Très bas</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_Bas1.png" /></td><td>Bas</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_Moyen2.png" /></td><td>Moyen</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_Elevé3.png" /></td><td>Elevé</td></tr><tr><td style="text-align: center;"><img src="legend/Indiceprsomptionprcaritalimentaire_7_Trèsélevé4.png" /></td><td>Très élevé</td></tr></table>': layer_Indiceprsomptionprcaritalimentaire_7,'Médiane du niveau de vie par UC - Landes<br /><table><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_0208100.png" /></td><td>0 - 20810</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_20810222101.png" /></td><td>20810 - 22210</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_22210236302.png" /></td><td>22210 - 23630</td></tr><tr><td style="text-align: center;"><img src="legend/MdianeduniveaudevieparUCLandes_6_23630283603.png" /></td><td>23630 - 28360</td></tr></table>': layer_MdianeduniveaudevieparUCLandes_6,'Monoparentalité<br /><table><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_0120.png" /></td><td>0 - 12</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_12251.png" /></td><td>12 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_25402.png" /></td><td>25 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Monoparentalit_5_401003.png" /></td><td>40 - 100</td></tr></table>': layer_Monoparentalit_5,'Part des 75 ans et plus<br /><table><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_2920.png" /></td><td>2 - 9,2</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_921291.png" /></td><td>9,2 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_1291762.png" /></td><td>12,9 - 17,6</td></tr><tr><td style="text-align: center;"><img src="legend/Partdes75ansetplus_4_176253.png" /></td><td>17,6 - 25</td></tr></table>': layer_Partdes75ansetplus_4,'Part des moins de 15 ans<br /><table><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_641290.png" /></td><td>6,4 - 12,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1291651.png" /></td><td>12,9 - 16,5</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1651992.png" /></td><td>16,5 - 19,9</td></tr><tr><td style="text-align: center;"><img src="legend/Partdesmoinsde15ans_3_1992953.png" /></td><td>19,9 - 29,5</td></tr></table>': layer_Partdesmoinsde15ans_3,'Taux de motorisation des ménages<br /><table><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_7598930.png" /></td><td>75,9 - 89,3</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_8939361.png" /></td><td>89,3 - 93,6</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_9369742.png" /></td><td>93,6 - 97,4</td></tr><tr><td style="text-align: center;"><img src="legend/Tauxdemotorisationdesmnages_2_97410893.png" /></td><td>97,4 - 108,9</td></tr></table>': layer_Tauxdemotorisationdesmnages_2,'<img src="legend/CommunesLandes_1.png" /> Communes - Landes': layer_CommunesLandes_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
